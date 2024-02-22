@@ -1,0 +1,111 @@
+#Options
+GenerateScanner = true
+GenerateParser = true
+Language = Java
+ScannerName = Lexico
+ParserName = Sintatico
+SemanticName = Semantico
+ScannerCaseSensitive = true
+ScannerTable = Full
+Input = Stream
+Parser = SLR
+#RegularDefinitions
+Letra: [a-zA-Z]
+Digito: [0-9]
+Adi: ["+"]
+Sub: ["-"]
+Mult: ["*"]
+Div:  ["/"]
+Deli_Abrir:  [\(]
+Deli_Fechar:  [\)]
+
+Virg: [","]
+Pont_V: [";"]
+
+Ig: ["="]
+String: \"(.)*\"
+ 
+Fun_Int: int
+Fun_Printf: printf
+Fun_Scanf: scanf
+
+Queb_L: \n
+#Tokens
+//int n1, n2, resultado; 
+//printf (“Coloque os dois números a serem calculados”);
+//scanf (n1);
+//scanf (n2);
+//resultado = n1+n2;
+//printf (resultado);
+
+PR1:{Fun_Int}
+PR2:{Fun_Printf}
+PR3:{Fun_Scanf}
+
+
+
+STRING:{String}
+
+QUEB_L:{Queb_L}
+
+ID:{Letra}({Letra} | {Digito})*
+
+SPACE:[\ \n\r\t\s]+
+
+NUM_INT:{Digito}+
+
+
+DELIM_ABRIR: {Deli_Abrir}
+DELIM_FECHAR: {Deli_Fechar}
+
+
+MAIS: {Adi}
+MENOS: {Sub}
+MULTI: {Mult}
+DIVI: {Div}
+
+ATRIBUICAO: {Ig}
+
+PONTV: {Pont_V}
+
+VIRG:{Virg}
+#NonTerminals
+<INICIO>
+<COMANDO>
+<COMANDO1>
+<COMANDO2>
+<COMANDO3>
+<COMANDO4>
+<Prior_3>
+<Prior_2>
+<Prior_1>
+<COMANDO5>
+#Grammar
+<INICIO>  ::=  <INICIO><COMANDO> | <COMANDO>;
+<COMANDO> ::= PR1 #8 SPACE <Prior_1> VIRG SPACE <Prior_1> VIRG SPACE <Prior_1> PONTV #9 QUEB_L<COMANDO1>;
+<COMANDO1> ::= PR2 #10 SPACE DELIM_ABRIR  <Prior_3> DELIM_FECHAR PONTV #11 QUEB_L<COMANDO2>;
+<COMANDO2> ::= PR3 #12 SPACE DELIM_ABRIR <Prior_3> DELIM_FECHAR PONTV #13 QUEB_L<COMANDO3>;
+<COMANDO3> ::= PR3 #14 SPACE DELIM_ABRIR <Prior_3> DELIM_FECHAR PONTV #15 QUEB_L<COMANDO4>;
+<COMANDO4> ::= <Prior_1> SPACE ATRIBUICAO SPACE <Prior_3> PONTV #16 QUEB_L<COMANDO5>;
+<Prior_3> ::= <Prior_3> MAIS <Prior_2> #5 
+	    | <Prior_3> MENOS <Prior_2>#6 
+             | <Prior_2>;
+<Prior_2> ::= <Prior_2> MULTI <Prior_1>#3 
+	    | <Prior_2> DIVI <Prior_1>#4 
+	    | <Prior_1>;
+<Prior_1> ::= DELIM_ABRIR <Prior_3> DELIM_FECHAR
+	    | NUM_INT #2
+	    | STRING #7   
+	    | ID #1;
+<COMANDO5>::= PR2 #17 SPACE DELIM_ABRIR <Prior_3> DELIM_FECHAR PONTV #18; 
+
+
+
+
+
+	    
+             
+	   
+
+
+

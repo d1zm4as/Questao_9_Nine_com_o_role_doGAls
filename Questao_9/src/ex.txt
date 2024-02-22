@@ -1,0 +1,64 @@
+Ação #8, Token: 2 ( int ) @ 0
+Ação #1, Token: 7 ( n1 ) @ 4
+Ação #1, Token: 7 ( n2 ) @ 8
+Ação #1, Token: 7 ( resultado ) @ 12
+Ação #9, Token: 17 ( ; ) @ 21
+Ação #10, Token: 3 ( printf ) @ 23
+Ação #7, Token: 5 ( "coloque os dois" ) @ 31
+Ação #11, Token: 17 ( ; ) @ 49
+Ação #12, Token: 4 ( scanf ) @ 51
+Ação #1, Token: 7 ( n1 ) @ 58
+Ação #13, Token: 17 ( ; ) @ 61
+Ação #14, Token: 4 ( scanf ) @ 63
+Ação #1, Token: 7 ( n2 ) @ 70
+Ação #15, Token: 17 ( ; ) @ 73
+Ação #1, Token: 7 ( resultado ) @ 75
+Ação #1, Token: 7 ( n1 ) @ 88
+Ação #1, Token: 7 ( n2 ) @ 91
+Ação #5, Token: 7 ( n2 ) @ 91
+Ação #16, Token: 17 ( ; ) @ 94
+Ação #17, Token: 3 ( printf ) @ 96
+Ação #1, Token: 7 ( resultado ) @ 104
+Ação #18, Token: 17 ( ; ) @ 114 
+
+=====================
+
+run:
+Ação #8, Token: 2 ( int ) @ 0
+Ação #1, Token: 7 ( n1 ) @ 4
+Ação #1, Token: 7 ( n2 ) @ 8
+Ação #1, Token: 7 ( resultado ) @ 12
+Ação #9, Token: 17 ( ; ) @ 21
+Ação #10, Token: 3 ( printf ) @ 23
+Coloque os dois numeros: 
+Ação #7, Token: 5 ( "coloque os dois" ) @ 31
+Ação #11, Token: 17 ( ; ) @ 49
+Ação #12, Token: 4 ( scanf ) @ 51
+Ação #1, Token: 7 ( n1 ) @ 58
+Ação #13, Token: 17 ( ; ) @ 61
+12
+Ação #14, Token: 4 ( scanf ) @ 63
+Ação #1, Token: 7 ( n2 ) @ 70
+Ação #15, Token: 17 ( ; ) @ 73
+8
+Ação #1, Token: 7 ( resultado ) @ 75
+Ação #1, Token: 7 ( n1 ) @ 88
+Ação #1, Token: 7 ( n2 ) @ 92
+Ação #2, Token: 9 ( 2 ) @ 95
+Ação #4, Token: 9 ( 2 ) @ 95
+Ação #5, Token: 11 ( ) ) @ 96
+Ação #2, Token: 9 ( 2 ) @ 102
+Ação #2, Token: 9 ( 1 ) @ 105
+Ação #2, Token: 9 ( 1 ) @ 107
+Ação #5, Token: 9 ( 1 ) @ 107
+Ação #3, Token: 11 ( ) ) @ 108
+Ação #2, Token: 9 ( 2 ) @ 111
+Ação #3, Token: 9 ( 2 ) @ 111
+Ação #2, Token: 9 ( 2 ) @ 114
+Ação #4, Token: 9 ( 2 ) @ 114
+Ação #4, Token: 11 ( ) ) @ 115
+Ação #16, Token: 17 ( ; ) @ 116
+Ação #17, Token: 3 ( printf ) @ 118
+Ação #1, Token: 7 ( resultado ) @ 126
+Ação #18, Token: 17 ( ; ) @ 136
+{n1=12, n2=8, resultado=4}
